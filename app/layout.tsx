@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Italianno,
+  Darker_Grotesque,
+  Cormorant_Unicase,
+} from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const italianno = Italianno({
+  variable: "--font-italianno",
   subsets: ["latin"],
+  weight: ["400"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const darkerGrotesque = Darker_Grotesque({
+  variable: "--font-darker-grotesque",
   subsets: ["latin"],
+  weight: ["300", "600"],
+});
+
+const cormorantUnicase = Cormorant_Unicase({
+  variable: "--font-cormorant-unicase",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -25,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${italianno.variable} ${darkerGrotesque.variable} ${cormorantUnicase.className} antialiased bg-primary`}
       >
         {children}
       </body>
