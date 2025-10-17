@@ -37,7 +37,7 @@ export default function Products() {
         pin: true,
         anticipatePin: 1,
         invalidateOnRefresh: true,
-        markers: true, // debug
+        markers: false, // debug
       });
 
       // ⭐ animate each item when near center
